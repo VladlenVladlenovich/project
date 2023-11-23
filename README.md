@@ -1,1 +1,0 @@
-# https://VladlenVladlenovich.github.io
