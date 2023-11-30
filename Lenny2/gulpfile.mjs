@@ -1,12 +1,14 @@
 import gulp from "gulp";
 import del from "del";
+
 import include from "gulp-file-include";
-import plumber from "gulp-plumber";
 import formatHtml from "gulp-format-html";
 
-import autoprefixer from "autoprefixer";
+
 import less from "gulp-less";
+import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
+import autoprefixer from "autoprefixer";
 import sortMediaQueries from "postcss-sort-media-queries";
 
 import minify from "gulp-csso";
@@ -24,16 +26,17 @@ import server from "browser-sync";
 
 const resources = {
     html: "src/html/**/*.html",
-    jsDev: "scr/scripts/dev/**/*.js",
+    jsDev: "src/scripts/dev/**/*.js",
     jsVendor: "src/scripts/vendor/**/*.js",
-    less: "src/styles/**/*.less",
+    less: "src/styles/**/*.less", 
+    images: "src/assets/images/**/*.{png,jpg,jpeg,webp,gif,svg}",
+    svgSprite: "src/assets/svg-sprite/*.svg",
+
     static: [
         "src/assets/icons/**/*.*",
-        "src/assets/fonts/**/*.(woff,woff2)"
-    ],
-    images: "src/assets/images/**/*.(png,jpg,jpeg,webp,gig,svg)",
-    svgSprite: "src/assets/svg-sprite/*.svg"
-
+        "src/assets/fonts/**/*.{woff,woff2}",
+        "src/json/**/*.json"
+    ]
 };
 
 function clean(){
@@ -95,7 +98,7 @@ function js(){
 
 function jsCopy(){
     return gulp 
-        .src("resources.jsVendor") 
+        .src(resources.jsVendor) 
         .pipe(plumber()) 
         .pipe(gulp.dest("dist/scripts"));
 }
@@ -118,7 +121,7 @@ function images(){
                 imagemin_optipng({optimizationLevel: 3})
             ])
         )
-        .pipe(gulp.dest("dist/assets/images"))
+        .pipe(gulp.dest("dist/assets/images"));
 }
 
 function svgSprite(){
@@ -183,4 +186,4 @@ export{
     build,
     serve,
     start
-}
+};

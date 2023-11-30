@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../Lenny"
+		}
+	],
+	"settings": {
+		"git.autorefresh": false,
+		"git.autoRepositoryDetection": false,
+		"github-enterprise.uri": "https://github.com/VladlenVladlenovich/VladlenVladlenovich.github.io"
+	}
+}

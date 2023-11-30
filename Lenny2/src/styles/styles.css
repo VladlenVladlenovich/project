@@ -154,15 +154,12 @@
 }
 
 .events__list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 120px 60px;
+  
 }
 
 .listing__card-event{
 
-    max-width: 405px;
-    width: calc(33.333% - 40px);
+
 
 }
 .card-event{
@@ -184,16 +181,11 @@
 
 
 .card-event__picture{
-    position: relative;
-    display: block;
-    margin-bottom: 25px;
+    
 }
 
 .card-event__picture::before{
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: 107.160%;
+   
 }
 
 .card-event__picture-img{
