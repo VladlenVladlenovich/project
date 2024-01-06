@@ -1,40 +1,23 @@
-<!DOCTYPE html> 
-<html lang="ru"> 
-    @@include('blocks/head.html')
-    
+<!DOCTYPE html>
+<html lang="ru">
 
-    <body class="body"> 
-        @@include('blocks/page-header.html')
-         
-        <main class="main">
-            <div class="home"> 
-                @@include('blocks/main-header.html')
-                
-              
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Lenni Art</title>
+  <link rel="stylesheet" href="styles/styles.css?ver=0">
 
-                <section class="offers home__offers"></section> 
-                @@include('blocks/about.html', {class: 'home__about' })
-
-                <section class="offers home__offers"></section> 
-                @@include('blocks/events-preview.html', {class: 'home__events-preview' })
-
-                <section class="upcoming home__upcoming"></section> 
-                @@include('blocks/blog-listing.html', {"class": 'home__listing' })
-                
-                <section class="listing home__listing"></section> 
-                @@include('blocks/contacts.html', {class: 'home__contacts' })
-                <!-- prettier-ignore -->
-              
-                
- 
-            <!-- </div class="doit home__doit"></div> -->
-            </div>  
-            
-        </main>     
-        
-        @@include('blocks/page-footer.html')
-        @@include('blocks/event-pp.html')
-
-       
-    </body> 
-</html>
+  <link rel="preconnnect" href="https://fonts.googleapis.com">
+  <link rel="preconnnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<main>
+<div class="index__listing">
+    <a href="main.html" class="index__title">Главная страница</a>
+    <a href="events.html" class="index__title">Листинг мероприятий</a>
+    <a href="event.html" class="index__title">Подробная страница</a>
+    <a href="default.html" class="index__title">Дефолты</a>
+</div>
+</main>
+</body>

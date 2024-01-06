@@ -70,12 +70,13 @@
         position: absolute;
         top: 8px;
         left: 0;
-        width: 6px;
-        height: 6px;
+        width: 4px;
+        height: 4px;
         border-radius: 50%;
         background-color: @red;
         pointer-events: none;
       }
+      
     }
     ol {
       counter-reset: li;
@@ -88,7 +89,7 @@
         box-sizing: border-box;
         display: inline-block;
         min-width: 20px;
-        color: @red;
+        color: @black;
         white-space: pre;
       }
     }
@@ -201,4 +202,8 @@
     b {
       font-weight: 700;
     }
+    &__container{
+      .container;
+    }
+    
   }

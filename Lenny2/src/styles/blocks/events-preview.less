@@ -1,8 +1,15 @@
 .events-preview{
     &__background{
         display: block;
-       position: absolute;
-       align-self: center;
+        position: absolute; 
+        align-self: center;
+        width: 100%;
+        &::before{
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 64.375%;
+        }
     }
 
     &__container{
@@ -10,7 +17,8 @@
         display: block;
         position: relative;
         top: 110px;
-        margin-bottom: 200px;
+        margin-bottom: 258px;
+
     }
 
     &__arrow-right,
@@ -32,10 +40,10 @@
         align-self: center;
         justify-content: center;
         align-items: center;
-    
     }
 
     &__strip{
+        padding: 2px 2px;
         display: flex;
         flex-direction: row;
     }
@@ -49,7 +57,7 @@
         border-radius: 1px;
         background-color: @black;
         border-color: @black;
-        margin: 0 5px;
+        margin: 0 4px;
 
         &--disabled{
             border-color: @gray;
@@ -57,11 +65,11 @@
         }
 
         &:first-child{
-            margin-left: 80px;
+            margin-left: 122px;
         }
 
         &:last-child{
-            margin-right: 80px;
+            margin-right: 122px;
         }
     }
 

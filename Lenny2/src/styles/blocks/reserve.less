@@ -14,6 +14,15 @@
         align-items: flex-start;
     }
 
+    &__label{
+        &--red{
+            color: @red;
+        }
+        &--disabled{
+            color: @gray_dark;
+        }
+    }
+
     &__order{
         grid-area: order;
     }
@@ -225,7 +234,6 @@
                 height: 24px;
                 border-radius: 50%;
                 background-color: @gray_dark;
-
             }
         }
         &:last-child{
