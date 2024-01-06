@@ -1,0 +1,88 @@
+.btn{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border: 1px solid @black;
+    background-color: transparent;
+    outline: none;
+    color: @black;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:active{
+        background-color: @black;
+        color: @white;
+    }
+
+    &:hover{
+        @media (hover: hover){
+        background-color: @black;
+        color: @white;
+        }
+    }
+}
+
+.btnclose{
+    align-self: flex-end;
+    border-color: transparent;
+    align-items: flex-end;
+    text-decoration: underline;
+}
+
+.btn-host{
+    padding-left: 0;
+    padding-right: 0;
+    width: 272px;
+    height: 52px;
+    background-color: @red;
+    border-color: transparent;
+    text-align: center;
+    color: @white;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    line-height: normal; 
+    &:active{
+        background-color: @red_dark;
+    }
+
+    &:hover{
+        @media (hover: hover){
+        background-color: @red_dark;
+        }
+    }   
+}
+
+.btn-tenant{
+    width: 272px;
+    height: 52px;
+    border-color: @black;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn-tickets{
+    padding: 15px 131px;
+    border: transparent;
+    background-color: @red;
+    outline: none;
+    color: @white;
+    &:active{
+        background-color: @red_dark;
+        color: @white;
+    }
+
+    &:hover{
+        @media (hover: hover){
+        background-color: @red_dark;
+        color: @white;
+        }
+    }
+}
