@@ -5,7 +5,7 @@
     width: 100%;
     height: 147px;
     z-index: 100;
-
+    
     &::before{
         content: "";
         position: absolute;
@@ -14,30 +14,33 @@
         width: 100%;
         height: 100%;
         background-color: rgba(222, 222, 222, 0.50);
+
         @supports (backdrop-filter: blur(10px)){
             backdrop-filter: blur(10px);
             background-color: rgba(222, 222, 222, 0.50);
         }
     }
 
-    
     &__container{
         .container();
+        box-sizing: border-box;
         position: relative;
         display: flex; 
         justify-content: space-between;
         align-items: center;
+        padding-right: 40px;   
     }
 
     &__logo{
-        display:inline-block;
+        display: inline-block;
         width: 202px;
         height: 147px;
-        
     }
 
     &__nav{
+        margin-right: 65px;
         display: inline-block;
+        white-space: nowrap;
     }
 
     &__nav-link{
@@ -47,6 +50,14 @@
         font-size: 18px;
         line-height: 25px;
         text-decoration: none;
-    
+        &:hover{
+            @media (hover:hover){
+                color: @red;
+            }
+        }
+
+        &:active{
+            color: @red;
+        }  
     }
 }

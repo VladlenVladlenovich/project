@@ -7,30 +7,34 @@
         @@include('blocks/page-header.html')
          
         <main class="main">
-            <div class="home"> @@include('blocks/event-pp.html')
-                <header class="main-header home__main-header">
-                    <h1 class="main-header__title"> Арт-пространство </h1>
-                    <picture class="main-header__picture">
-                        <img src="assets/images/LENNI.png">
-                        <class="main-header__img" />
-                        </picture>
+            <div class="home"> 
+                @@include('blocks/main-header.html')
                 
-                        <p class="main-header__text">для людей, горящих сердцем и делом
-                            место для настоящего</p>
-                </header> 
-                <article class="listing__card-event card-event">
+              
+
                 <section class="offers home__offers"></section> 
-                <section class="about home__about"></section> 
+                @@include('blocks/about.html', {class: 'home__about' })
+
+                <section class="offers home__offers"></section> 
+                @@include('blocks/events-preview.html', {class: 'home__events-preview' })
+
                 <section class="upcoming home__upcoming"></section> 
+                @@include('blocks/blog-listing.html', {"class": 'home__listing' })
+                
                 <section class="listing home__listing"></section> 
-                <section class="contacts home__contacts"></section> 
+                @@include('blocks/contacts.html', {class: 'home__contacts' })
+                <!-- prettier-ignore -->
+              
+                
  
-            </div class="doit home__doit"></div> 
+            <!-- </div class="doit home__doit"></div> -->
             </div>  
             
         </main>     
         
         @@include('blocks/page-footer.html')
-        
+        @@include('blocks/event-pp.html')
+
+       
     </body> 
 </html>

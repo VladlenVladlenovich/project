@@ -164,7 +164,7 @@
 }
 .card-event{
     box-sizing: border-box;
-    flex-direction: column;    
+    flex-direction: column;   
 }
 
 .card-event__link{

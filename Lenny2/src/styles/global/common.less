@@ -10,6 +10,7 @@ body{
     display: flex;
     flex-direction: column; 
     min-height: 100vh;
+    padding-top: 147px;
     background-color: @gray;
     background-image: url(../assets/images/noise.png),
         url(../assets/images/bg.png); 
@@ -26,12 +27,13 @@ body{
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%; 
-    padding-top: 147рх;
+    
 }
 
 .main{
     flex: 1 0 auto;
 }
+
 
 .page-footer{
     flex: 0 0 auto;
@@ -48,10 +50,54 @@ img{
     object-fit: cover;
 }
 
-button{
+input,
+textarea,
+button,
+select{
     box-shadow: none;
     outline: none;
     color: @black;
     font-family: @font1;
-    cursor: pointer;
 }
+
+ button{
+    cursor: pointer;
+ }
+
+ input,
+ textarea{
+    &::-webkit-input-placeholder{
+        color: #6c6c6c;
+    }
+    &::-moz-input-placeholder{
+        color: #6c6c6c;
+    }
+    &:-webkit-input-placeholder{
+        color: #6c6c6c;
+    }
+    &:-ms-input-placeholder{
+        color: #6c6c6c;
+    }
+
+ }
+
+ input:focus,
+ textarea:focus{
+    &::-webkit-input-placeholder{
+        color: #6c6c6c;
+    }
+    &::-moz-input-placeholder{
+        color: #6c6c6c;
+    }
+    &:-webkit-input-placeholder{
+        color: #6c6c6c;
+    }
+    &:-ms-input-placeholder{
+        color: #6c6c6c;
+    }
+
+ }
+
+ textarea{
+    resize: none;
+ }

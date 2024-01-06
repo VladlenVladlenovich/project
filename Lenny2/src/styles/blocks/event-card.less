@@ -2,12 +2,11 @@
     display: flex;
     width: 405px;
     max-width: 100%;
-    min-width: 200 px;
+    min-width: 280px;
     color: @black;
-}
-
-
+ 
     &__link{
+    
         text-decoration: none;
         display: flex;
         flex-direction: column;
@@ -18,7 +17,6 @@
                 text-decoration-color: @red;
             }        
         }
-
 
         &:hover .event-card__title{
             @media (hover: hover){
@@ -32,7 +30,7 @@
         display: block;
         position: relative;
         width: 100%;
-        margin: 0 0 25px;
+        margin: 0 0 0; 
         font-size: 0;
         text-decoration: none;
         overflow: hidden;
@@ -40,7 +38,19 @@
             content: "";
             display: block;
             width: 100%;
-            padding-top: 107.16%;
+
         }
     }
 
+    &__title{
+    margin-top: 20px;
+    margin-bottom: 0;
+    min-height: 64px;
+    font-size: 24px;
+    }
+
+    &__description{
+        min-height: 64px;
+    
+    }
+}

@@ -1,0 +1,71 @@
+.events-preview{
+    &__background{
+        display: block;
+       position: absolute;
+       align-self: center;
+    }
+
+    &__container{
+        .container;
+        display: block;
+        position: relative;
+        top: 110px;
+        margin-bottom: 200px;
+    }
+
+    &__arrow-right,
+    &__arrow-left{
+        display: flex;
+        align-items: center;
+        text-decoration-color: transparent; 
+        transition: color 0.2s, text-decoration-color 0.2s; 
+        cursor: pointer;
+        &:hover{
+        color: @red; 
+        text-decoration-color: @red; 
+        }
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    &__strip{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__stripper{
+        font-size: 34px;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: @black;
+        border-color: @black;
+        margin: 0 5px;
+
+        &--disabled{
+            border-color: @gray;
+            background-color: @gray_dark;
+        }
+
+        &:first-child{
+            margin-left: 80px;
+        }
+
+        &:last-child{
+            margin-right: 80px;
+        }
+    }
+
+    &__link-pre{
+        justify-content: flex-end;
+    }
+}
