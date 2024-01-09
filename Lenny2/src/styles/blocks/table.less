@@ -1,8 +1,9 @@
 .table{
+    text-align: center; 
     width: 100%;
-  border-collapse: collapse;
-  color: @black;
-  text-align: center;
+    border-collapse: collapse;
+    color: @black;
+    
 
   @media @bw768{
     display: block;
@@ -166,8 +167,8 @@
   }
 
   &__ok {
-    display: block;
     position: relative;
+    display: block;
     width: 26px;
     height: 26px;
     margin: auto;
@@ -175,11 +176,11 @@
     background-color: #1F1E1E;
     &::after {
       content: "";
-      box-sizing: border-box;
-      display: block;
       position: absolute;
       top: 4px;
       left: 9px;
+      box-sizing: border-box;
+      display: block;
       width: 8px;
       height: 14px;
       border-right: 2px solid #ffffff;

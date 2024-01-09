@@ -1,24 +1,22 @@
 .events-preview{
     &__background{
-        display: block;
         position: absolute; 
         align-self: center;
-        width: 100%;
+        
         &::before{
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 64.375%;
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 64.375%;
         }
     }
 
     &__container{
         .container;
-        display: block;
         position: relative;
         top: 110px;
+        display: block;
         margin-bottom: 258px;
-
     }
 
     &__arrow-right,
@@ -29,8 +27,8 @@
         transition: color 0.2s, text-decoration-color 0.2s; 
         cursor: pointer;
         &:hover{
-        color: @red; 
-        text-decoration-color: @red; 
+            color: @red; 
+            text-decoration-color: @red; 
         }
     }
 
@@ -43,13 +41,12 @@
     }
 
     &__strip{
-        padding: 2px 2px;
         display: flex;
         flex-direction: row;
+        padding: 2px 2px;
     }
 
-    &__stripper{
-        font-size: 34px;
+    &__stripper{        
         content: "";
         display: block;
         width: 15px;
@@ -58,6 +55,7 @@
         background-color: @black;
         border-color: @black;
         margin: 0 4px;
+        font-size: 34px;
 
         &--disabled{
             border-color: @gray;
@@ -74,6 +72,7 @@
     }
 
     &__link-pre{
+        display: flex;
         justify-content: flex-end;
     }
 }

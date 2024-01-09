@@ -122,11 +122,11 @@
     }
 
       &__total {
-        text-align: center;
         margin-top: 10px;
         margin-bottom: 40px;
+        text-align: center;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 20px; 
         &::before {
           content: attr(data-caption);
           margin-right: 30px;
@@ -146,8 +146,8 @@
     }
 
     &__price-item{
-        box-sizing: border-box;
         position: relative;
+        box-sizing: border-box;
         min-height: 24px;
         margin-bottom: 15px;
         padding-left: 34px;
@@ -186,6 +186,26 @@
         margin-bottom: 30px;
     }
 
+    &__btn-tickets{
+        padding: 15px 131px;
+        border: transparent;
+        background-color: @red;
+        outline: none;
+        color: @white;
+        &:active{
+            background-color: @red_dark;
+            color: @white;
+        }
+    
+        &:hover{
+            @media (hover: hover){
+            background-color: @red_dark;
+            color: @white;
+            }
+        }
+    }
+    
+
     &__notation{
         display: flex;
         flex-direction: column;
@@ -193,8 +213,8 @@
     }
     
     &__note{
-        box-sizing: border-box;
         position: relative;
+        box-sizing: border-box;
         min-height: 24px;
         margin-bottom: 13px;
         padding-left: 54px;
@@ -206,11 +226,11 @@
             &::before,
             &::after{
                 content: "";
-                box-sizing: border-box;
-                display: block;
                 position: absolute;
                 left: 0;
                 top: 0;
+                box-sizing: border-box;
+                display: block;
                 width: 24px;
                 height: 24px;
                 border: 1px solid @black;  
@@ -226,10 +246,10 @@
         &--booked{
             &::before{
                 content: "";
-                display: block;
                 position: absolute;
                 left: 6px;
                 top: 0;
+                display: block;
                 width: 24px;
                 height: 24px;
                 border-radius: 50%;

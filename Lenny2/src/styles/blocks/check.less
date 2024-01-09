@@ -1,16 +1,15 @@
 .check{
-    box-sizing: border-box;
     position: relative;
-    padding-left: 40px;
+    box-sizing: border-box;
     display: block;
-
+    padding-left: 40px;
+    
 
     &--red{
         color: @red;
         .check__mark{
             border-color: @red;
         }
-
         .check__input{
             &:checked{
                 & ~ .check__mark{
@@ -50,13 +49,13 @@
     }
 
     &__mark{
-        position: absolute;
+        position: absolute; 
         top: 0;
         left: 0;
+        box-sizing: border-box;
         width: 24px;
         height: 24px;
         border: 1px solid @black;
-        box-sizing: border-box;
         background-color: transparent;
     }
 

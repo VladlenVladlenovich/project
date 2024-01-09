@@ -15,11 +15,11 @@
     }
 
     &__input{
-        border: none;
         box-sizing: border-box;
         width: 100%;
         height: 100%;
         padding: 15px 15px 15px 20px;
+        border: none;
         background-color: @white;
 
         &:focus{
@@ -29,10 +29,10 @@
 
     &__submit{
         box-sizing: border-box;
-        padding: 15px 23px;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 15px 23px;
         border-radius: 0;
         border: none;
         outline: none;
@@ -59,21 +59,18 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        
     }
 
-    &__social-media{
-        margin-right: 85px;
+    &__social-media{ 
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         height: 100%;
+        margin-right: 110px;
     }
 
     &__sticky-btn{
-        margin-right: 25px;
-        margin-left: 25px;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
@@ -81,6 +78,8 @@
         width: 60px;
         height: 60px;
         border: none;
+        margin-right: 25px;
+        margin-left: 25px;
         outline: none;
         border-radius: 50%;
         background-color: @black;
@@ -96,8 +95,8 @@
     &__confident,
     &__cookies,
     &__creating-link{    
-        align-items: normal;
         bottom: 0;
+        align-items: normal;
         color: @black;
         font-family: Open Sans;
         font-size: 16px;
@@ -110,18 +109,19 @@
     &__docs,
     &__creating{
         display: flex;
-        align-items: flex-end; 
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__docs{
-        min-width: 384px;
+        width: 384px;
         align-self: flex-end;
     }
 
     &__creating{
-        min-width: 280px;
+        width: 280px;
         align-self: flex-end;
+        align-items: end;
     }
 
     &__creating-link{

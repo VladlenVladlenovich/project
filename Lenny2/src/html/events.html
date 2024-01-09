@@ -1,21 +1,18 @@
 <!DOCTYPE html> 
 <html lang="ru"> 
-    @@include('blocks/head.html')
 
-    <body class="body"> 
-        @@include('blocks/page-header.html')
-         
-        <main class="main">
-            @@include('blocks/breadcrumbs.html')
+  @@include('blocks/head.html')
+  <body class="body">
 
-            <div class="events">
-                <section class="listing events__listing"> 
-                    <h2 class="listing__title section-title">Мероприятия</h2> 
-                    
-                    <div class="listing__events-list"> 
-                     
-                       
-                    <!-- prettier-ignore -->
+    @@include('blocks/page-header.html')
+    <main class="main">
+
+      @@include('blocks/breadcrumbs.html')
+      <div class="events">
+        <section class="listing events__listing"> 
+          <h2 class="listing__title section-title">Мероприятия</h2> 
+          <div class="listing__events-list">
+            <!-- prettier-ignore -->
                     
                     @@loop('blocks/event-card.html', [ 
                     { 
@@ -79,30 +76,19 @@
                     "datetime": "2022-12-27T10:00" 
                         }
                     ])
-                    </div>
-                    
-                    <a href="#" class="link-vertical">
-                        <span class="link-verical__name">Показать еще</span>
-    
-                        <svg class="link-vertical__icon" width="62" height="93">
-                            <use xlink:href="assets/icons/symbols.svg#link-vertical"></use>
-                        </svg>
+            </div>
+            <a href="#" class="link-vertical">
+              <span class="link-verical__name">Показать еще</span>
+              <svg class="link-vertical__icon" width="62" height="93">
+                <use xlink:href="assets/icons/symbols.svg#link-vertical"></use>
+              </svg>
+            </a>   
+        </section>
 
-                      </a>   
-
-                    
-    
-                    </section>
-
-                    <section class="events__services">
-
-                      
-
-                        <h2 class="section-title">Дополнительные услуги</h2>
-                        <p class="events__services-description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
-                   
-
-                    <table class="events__tariffs-table  table">
+        <section class="events__services">
+          <h2 class="section-title">Дополнительные услуги</h2>
+          <p class="events__services-description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
+          <table class="events__tariffs-table  table">
                         <thead class="table__head">
                           <tr class="table__head-tr">
                             <th class="table__th"></th>
@@ -203,23 +189,22 @@
                              <th class="table__footer-th">Тариф «All stars»</th>
                          </tr>
                         </tfoot>
-                      </table>
-                    </section>
+          </table>
+        </section>
 
-                    <section class="main-header__iwant-mb100">
-                      <p class="main-header__iwant-iwant">я хочу:</p>
-                      <section class="main-header__btns">
-                          <button type="submit" class="btn btn-host">Провести мероприятие</button>
-                          <button type="submit" class="btn btn-tenant">Cтать арендатором</button>
-                      </section>
-                  </section>
+        <section class="main-header__iwant-mb100">
+          <p class="main-header__iwant-iwant">я хочу:</p>
+          <section class="main-header__btns">
+            <a href="#" class="btn btn-host">Провести мероприятие</a>
+            <a href="#" class="btn btn-tenant">Cтать арендатором</a>
+          </section>
+        </section>
 
-            </div>
-        </main>     
-
-        @@include('blocks/events-contacts.html')
-        @@include('blocks/page-footer.html')
-    </body> 
+      </div>
+    </main>     
+    @@include('blocks/events-contacts.html')
+    @@include('blocks/page-footer.html')
+  </body> 
 
         
     

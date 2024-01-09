@@ -23,8 +23,8 @@
 
     &__container{
         .container();
-        box-sizing: border-box;
         position: relative;
+        box-sizing: border-box;
         display: flex; 
         justify-content: space-between;
         align-items: center;
@@ -38,9 +38,10 @@
     }
 
     &__nav{
-        margin-right: 65px;
-        display: inline-block;
-        white-space: nowrap;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin: 0 auto;
     }
 
     &__nav-link{
@@ -50,6 +51,7 @@
         font-size: 18px;
         line-height: 25px;
         text-decoration: none;
+        transition: color 0.2s;
         &:hover{
             @media (hover:hover){
                 color: @red;
@@ -59,5 +61,11 @@
         &:active{
             color: @red;
         }  
+    }
+
+    &__btn-wrapper{
+        display: flex;
+        justify-content: center;
+        min-width: 202px;
     }
 }
