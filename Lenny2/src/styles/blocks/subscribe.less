@@ -117,8 +117,7 @@
     &__creating {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;   
     }
 
     &__docs {
@@ -140,8 +139,13 @@
         align-items: flex-end; 
     }
 
+    &__links-wrapper{
+        margin-top: -50px;
+    }
+
     @media @bw1170 {
         &__links-wrapper {
+            margin-top: 0;
             display: flex;
             flex-direction: column;
         }
