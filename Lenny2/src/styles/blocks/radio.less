@@ -1,8 +1,8 @@
-.radio{
+.radio {
     display: flex;
     flex-direction: column;
 
-    &__label{
+    &__label {
         position: relative;
         box-sizing: border-box;
         display: block;
@@ -11,22 +11,22 @@
         min-height: 23px;
         cursor: pointer;
         
-        &:last-child{
+        &:last-child {
             margin-bottom: 0;
             }
         }
 
-    &__input{
+    &__input {
         .is-hidden;
 
-        &:checked{
-            &~.radio__mark{
+        &:checked {
+            &~.radio__mark {
                 background-color: @black;
             }
         }
     }
     
-    &__mark{
+    &__mark {
         position: absolute;
         left: 0;
         top: 0;
@@ -36,11 +36,12 @@
         border-radius: 50%;
         border: 3px solid @black;
         padding: 3px;
-        background-clip: content-box ;
+        background-clip: content-box;
         background-color: transparent;
         transition: background-color 0.2s;
     }
-    &__name{
+    
+    &__name {
         display: block;
         margin-left: 23px;
         font-family: @font1;

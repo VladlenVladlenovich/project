@@ -1,25 +1,25 @@
-.event{
+.event {
     padding: 40px 0 150px;
 
-    &__container{
+    &__container {
         .container;
     }
 
-    &__header{
+    &__header {
         .container;
         margin-bottom: 80px;
     }
 
-    &__about{
+    &__about {
         display: flex;
         justify-content: center;
         align-items: center;
-        @media @bw768{
+        @media @bw768 {
             flex-wrap: wrap;
         }
     }
 
-    &__info{
+    &__info {
         position: relative;
         display: flex;
         box-sizing: border-box;
@@ -33,10 +33,9 @@
         text-transform: uppercase;
 
         &::before,
-        &::after{
+        &::after {
             content: "";
             position: absolute;
-            left: 0;
             display: block;
             width: 140px;
             max-width: 100%;
@@ -47,19 +46,20 @@
                 rgba(255, 255, 255, 0.00) 82.86%);
         }
 
-        &::before{
+        &::before {
             top: 0;
+            right: 0;
         }
 
-        &::after{
+        &::after {
             bottom: 0;
         }
 
-        &:last-child{
+        &:last-child {
             align-items: flex-start;
             text-align: left;
             &::before,
-            &::after{
+            &::after {
                 left: 0;
                 right: auto;
                 background-image: linear-gradient(
@@ -70,13 +70,13 @@
         }
     }
 
-    &__time{
+    &__time {
         font-size: 30px;
         font-style: normal;
         font-weight: 300; 
         line-height: 36px;
-        &[datatime]{
-            &::after{
+        &[datatime] {
+            &::after {
                 content: attr(data-caption);
                 margin-left: 10px;
                 font-weight: 700;
@@ -85,41 +85,41 @@
             }
         }
     }
-    &__info-text{
+    &__info-text {
         font-size: 16px;
         line-height: 19px;
         font-weight: 700;
     }
 
-    &__picture{
+    &__picture {
         display: block;
         width: 497px;
         margin: 0 50px;
     }
 
-    &__image{
+    &__image {
         display: block;
         width: 100%;
     }
 
-    &__content{
+    &__content {
         max-width: 830px;
     }  
 
-    &__content-title{
+    &__content-title {
         font-weight: 700;
     }
 
-    &__content-schedule{
+    &__content-schedule {
         margin-bottom: 75px;
     }
 
-    &__content-text{
+    &__content-text {
         margin-bottom: 50px;
         max-width: 868px;
     }
 
-    &__content-tracklist{
+    &__content-tracklist {
         margin-bottom: 80px;
     }
 }

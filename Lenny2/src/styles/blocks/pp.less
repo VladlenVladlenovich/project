@@ -1,4 +1,4 @@
-.pp{
+.pp {
     position: block;
     top: 0;
     left: 0;
@@ -10,12 +10,12 @@
     z-index: 110;  
     background-color: @gray;
     //display: none,
-    @supports(backdrop-filter: blur(25px)){
+    @supports(backdrop-filter: blur(25px)) {
         background-color: @black_40;
         backdrop-filter: blur(25px);
     }
 
-    &__container{
+    &__container {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -30,7 +30,7 @@
         background-size: auto;
     }
 
-    &__title{
+    &__title {
         box-sizing: border-box;
         margin: -110px 0 70px;
         padding: 10px 84px;
@@ -45,14 +45,14 @@
         color: @white;
     }
 
-    &__sticky-close{
+    &__sticky-close {
         position: sticky;
         align-self: flex-end;
         top: 0;
         width: 0;
     }
 
-    &__sticky-btn{
+    &__sticky-btn {
         position: absolute;
         right: -70px;
         top: -100px;
@@ -68,14 +68,15 @@
         background-color: @black;
         color: @white;
         transition: background-color 0.2s;
-        &:hover{
-            @media(hover:hover){
+        
+        &:hover {
+            @media(hover:hover) {
                 background-color: @red_dark;
             }
         }
     }
 
-    &__form{
+    &__form {
         margin: auto;
         max-width: 870px;
     }

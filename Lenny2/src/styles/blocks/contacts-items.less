@@ -1,13 +1,19 @@
-.contacts-item{
+.contacts-item {
     display: flex;
     gap: 54px;
     align-items: center;
-    &--column{
+    @media @bw1170 {
+        flex-direction: column; 
+        min-width: 230px;
+        gap: 30px;       
+    }
+
+    &--column {
         flex-direction: column; 
         width: calc(33.3333% - 50px);        
     }
 
-    &__img{
+    &__img {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -17,54 +23,74 @@
         min-height: 110px;
         background-color: @black;
         color: @red;
-        &--center{
+        @media @bw1170 {
+            margin: 0 auto;  
+    
+        }
+        &--center {
             margin: 0 auto;   
          }  
     }
 
-    &__title{
+    &__title {
         margin: 0 0 10px;
         font-weight: 600;
         font-size: 20px;
         line-height: normal;
         color: @black;
-        &--center{
+        @media @bw1170 {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;  
+            font-size: 18px;
+            font-weight: 700; 
+        }
+
+        &--center {
             text-align: center;
             width: 100%;
             margin-top: 40px;
-            margin-bottom: 10px;
-            
+            margin-bottom: 10px; 
         }
     }
 
-    &__info{
+    &__info {
         display: block;
         margin: 0 0 5px;
         font-weight: 400;
         font-size: 16px;
         line-height: normal;
         color: @black;
-        &--center{
+        @media @bw1170 {
+            margin: 0 0 0;
+            text-align: center;
+            max-width: 401px;
+            width: 100%;
+        }
+
+        &--center {
             margin: 0 0 0;
             text-align: center;
             max-width: 401px;
             width: 100%;
         }
         
-        &[href]{
+        &[href] {
             text-decoration: none;
             transition: color 0.2s;
-            &:hover{
-                @media (hover:hover){
+
+            &:hover {
+                @media (hover:hover) {
                     color: @red;
                 }
             }
-            &:active{
+            
+            &:active {
                 color: @red;
             }  
         }
         
-        &:last-child{
+        &:last-child {
                 margin-bottom: 0;
         }
     }

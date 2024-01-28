@@ -1,11 +1,12 @@
 .breadcrumbs{
     .container;
     margin-top: 40px;
-    @media @bw768{
+
+    @media @bw768 {
         display: none;
     }
 
-    &__link{
+    &__link {
         display: inline;
         margin-right: 10px;
         color: @black;
@@ -13,7 +14,8 @@
         line-height: 22px;
         text-decoration: none;
         transition: color 0.2s;
-        &::after{
+        
+        &::after {
             content: "/";
             position: relative;
             left: 4px;
@@ -23,12 +25,14 @@
             pointer-events: none;
         }
 
-        &:hover{
+        &:hover {
             color: @red;
         }
-        &:last-child{
+
+        &:last-child {
             margin-right: 0;
-            &::after{
+
+            &::after {
                 display: none;
             }
         }

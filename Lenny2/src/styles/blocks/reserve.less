@@ -1,4 +1,4 @@
-.reserve{
+.reserve {
     display: grid;
     gap: 65px 11%;
     grid-template-columns: 405px calc(89% - 405px);
@@ -7,34 +7,57 @@
         "order legend";
     width: 100%;
 
-    &__checks{
+    @media @bw1340 {
+        gap: 65px 6.5%;
+        grid-template-columns: 340px calc(93.5% - 340px);
+    }
+    
+    @media @bw1020 {
+        gap: 60px;
+        grid-template-columns: auto 390px;
+        grid-template-areas: 
+          "scheme scheme"
+          "checks legend"
+          "checks order"; 
+    }
+
+      @media @bw768 {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+          "scheme"
+          "legend"
+          "checks"
+          "order"; 
+    }
+
+    &__checks {
         grid-area: checks;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    &__label{
-        &--red{
+    &__label {
+        &--red {
             color: @red;
         }
-        &--disabled{
+        &--disabled {
             color: @gray_dark;
         }
     }
 
-    &__order{
+    &__order {
         grid-area: order;
     }
 
-    &__scheme{
+    &__scheme {
         grid-area: scheme;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
 
-    &__legend{
+    &__legend {
         grid-area: legend;
         display: flex;
         flex-direction: column;
@@ -42,7 +65,7 @@
         text-align: right;
     }
 
-    &__section-title{
+    &__section-title {
         margin: 0 0 20px;
         font-weight: 700;
         font-size: 18px;
@@ -52,14 +75,14 @@
         }
     }
 
-    &__check{
+    &__check {
         margin-bottom: 10px;
-        &:last-child{
+        &:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__scheme-container{
+    &__scheme-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -67,7 +90,7 @@
         max-width: 780px;
     }
 
-    &__scheme-title{
+    &__scheme-title {
         margin: 0 0 40px;
         padding: 6px 56px;
         background-color: @black;
@@ -121,7 +144,7 @@
         }
     }
 
-      &__total {
+    &__total {
         margin-top: 10px;
         margin-bottom: 40px;
         text-align: center;
@@ -138,14 +161,14 @@
         }
     }
 
-      &__price{
+    &__price {
         display: flex;
         flex-direction: column;    
         align-items: flex-end;
         margin-bottom: 0 0 35px;
     }
 
-    &__price-item{
+    &__price-item {
         position: relative;
         box-sizing: border-box;
         min-height: 24px;
@@ -155,7 +178,7 @@
         font-size: 14px;
         line-height: 19px;
 
-        &::before{
+        &::before {
             content: "";
             display: block;
             position: absolute;
@@ -166,53 +189,52 @@
             background-color: @black;
         }
 
-        &::after{
+        &::after {
             content: attr(data-caption);
 
         }
         
-        &--red{
-            &::before{
+        &--red {
+            &::before {
             background-color: @red;
              }
         }
 
-        &:last-child{
+        &:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__price-list{
+    &__price-list {
         margin-bottom: 30px;
     }
 
-    &__btn-tickets{
+    &__btn-tickets {
         padding: 15px 131px;
         border: transparent;
         background-color: @red;
         outline: none;
         color: @white;
-        &:active{
+        &:active {
             background-color: @red_dark;
             color: @white;
         }
     
         &:hover{
-            @media (hover: hover){
+            @media (hover: hover) {
             background-color: @red_dark;
             color: @white;
             }
         }
     }
     
-
-    &__notation{
+    &__notation {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
     
-    &__note{
+    &__note {
         position: relative;
         box-sizing: border-box;
         min-height: 24px;
@@ -222,9 +244,9 @@
         font-size: 14px;
         line-height: 19px;
         
-        &--free{
+        &--free {
             &::before,
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -237,14 +259,14 @@
                 border-radius: 50%;
             }
 
-            &::after{
+            &::after {
                 left: 12px;
                 border-color: @red;
             }
         }
 
-        &--booked{
-            &::before{
+        &--booked {
+            &::before {
                 content: "";
                 position: absolute;
                 left: 6px;
@@ -256,7 +278,8 @@
                 background-color: @gray_dark;
             }
         }
-        &:last-child{
+        
+        &:last-child {
             margin-bottom: 0;
         }
     }  

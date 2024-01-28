@@ -1,39 +1,52 @@
-.page-footer{
+.page-footer {
     box-sizing: border-box;
     padding: 0 0 75px;
 
-    &__container{
+    &__container {
         .container;
     }
 
-    &__border{
+    &__border {
         display: flex;
         margin-bottom: 60px;
 
         &::before,
-        &::after{
+        &::after {
             content: '';
             flex-grow: 1;
             height: 2px;
             width: 2px;
         }
 
-        &::before{
+        &::before {
             margin-right: 50px;
             background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 82.86%);
+            @media @bw1170{
+                margin-right: 25px;
+            }
 
         }
-        &::after{
+        &::after {
             margin-left: 50px;
             background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%);
+            @media @bw1170{
+                margin-left: 25px;
+            }
         }
     }
-    &__wrapper{
+    &__wrapper {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 50px;
     }
 
-    &__nav{
+    &__editor-label{
+        display: block;
+        margin-bottom: 20px;
+        
+    }
+
+    &__nav {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -41,7 +54,7 @@
         margin-right: 30px;
         padding-left: 26px;
 
-        &::before{
+        &::before {
             content: '';
             position: absolute;
             top: 0;
@@ -51,7 +64,8 @@
             background-color: @red;
         }
     }
-    &__nav-link{
+
+    &__nav-link {
         display: block;
         text-decoration: none;
         font-size: 16px;
@@ -59,13 +73,13 @@
         color: @black;
         transition: 0,2s;
 
-        &:hover{
-            @media (hover:hover){
+        &:hover {
+            @media (hover:hover) {
                 color: @red;
             }
         }
 
-        &:active{
+        &:active {
             color: @red;
         }
     }
