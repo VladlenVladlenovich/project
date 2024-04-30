@@ -15,6 +15,14 @@
 
     &+.article-card {
         margin-top: 120px;
+        @media @bw1660 {
+            margin-top: 110px;
+        }
+
+        @media @bw1170 {
+            margin-top: 76px;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -28,17 +36,37 @@
             height: 1px;
             background-color: @black;
             pointer-events: none;
+
+            @media @bw1660 {
+                margin: 0 auto 50px;
+            }
+
+            @media @bw768 {
+                margin: 0 auto 40px;
+            }
         }
+
+        @media @bw1660 {
+            margin-top: 111px;
+        }
+        
+        @media @bw768 {
+            margin-top: 116px;
+        }
+
+        
     }
 
     &__link {
         flex-shrink: 0; 
         align-self: flex-start;
         display:  block; 
-        width: 467px; 
+        max-width: 467px; 
+        min-width: 467px;
         margin-right: 60px; 
         font-size: 0; 
         text-decoration: none;
+
         &:hover {
             & ~ .article-card__info {
                 .article-card__title-link {
@@ -96,7 +124,14 @@
         padding: 30px 0; 
         padding-right: 150px; 
 
-        
+        @media @bw1170 {
+            padding: 23px 0; 
+        } 
+
+        @media @bw768 {
+            padding-top: 10px;
+            padding-right: 0;
+        }
     }
         
     &__time  { 
@@ -104,13 +139,18 @@
         font-weight: 300; 
         font-size: 16px; 
         line-height: 22px; 
+
+        @media @bw768 {
+            margin: 0 0 20px;
+        }
     }
     
     &__title-link, 
     &__description { 
        max-width: 470px;
+
        @media @bw1170 {
-        min-width: 93%;
+            min-width: 93%;
         }  
     }
     
@@ -123,6 +163,15 @@
             color: @red; 
             text-decoration-color: @red; 
         }
+
+        @media @bw1170 {
+            margin: auto 0 8px; 
+        } 
+
+
+        @media @bw768 {
+            margin: auto 0 0;
+        }
     }
 
     &__title { 
@@ -131,26 +180,47 @@
         font-weight: 700; 
         font-size: 24px; 
         line-height: 33px;
+
         @media @bw1170 {
-            margin-bottom: -20px; 
+            margin-bottom: 10px; 
+            font-size: 19px;
         }  
+
+        @media @bw768 {
+            line-height: normal;
+            font-size: 16px;
+        }
     }
         
     &__description {
         margin: 0; 
         font-size: 16px; 
         line-height: 22px;
+
+        @media @bw1170 {
+            min-width: 75%;
+        }  
+
+        @media @bw768 {
+            line-height: normal;
+            font-size: 14px;
+        }
     }
 
     &__arrow {
         position: absolute;
         right: 0;
-        bottom: 30px;
+        bottom: 20px;
         padding: 2px;
         color: inherit;
         transition: none;
+
         @media @bw1170 {
-            bottom: 30px; 
+            bottom: 18px; 
+        } 
+        
+        @media @bw768 {
+            bottom: -43px; 
         }  
     }
 }

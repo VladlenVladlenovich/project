@@ -15,7 +15,7 @@
 
     @media @bw768 {
         height: 70px;
-      }
+    }
     
     &::before {
         content: "";
@@ -35,11 +35,15 @@
 
     &__container {
         .container();
+        
         position: relative;
         display: flex; 
         justify-content: space-between;
         align-items: center;
         z-index: 1;  
+        @media @bw768 {
+            padding-left: 0;
+          }
         }
 
     &__logo {
@@ -73,7 +77,6 @@
         align-items: baseline;
         margin: 0 auto;
         
-
         @media @bw1020 {
             position: absolute;
             left: 0;
@@ -157,6 +160,7 @@
             border-radius: 2px;
             background-color: @black;
             transform-origin: 50% 50%;
+            transition: 0.4s, box-shadow 0.4s;
         }
     
         &::before {
@@ -269,4 +273,6 @@
             margin: auto;
         }
     }
+
+   
 }

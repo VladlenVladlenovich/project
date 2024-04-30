@@ -7,6 +7,14 @@
     &__container {
         .container;
         margin-bottom: 90px;
+
+        @media @bw1170 {
+            margin-bottom: 40px;
+        }
+
+        @media @bw768 {
+            margin-bottom: 60px;
+        }
     }
 
     &__title {
@@ -20,7 +28,7 @@
         }
 
         @media @bw1170 {
-            margin-bottom: 80px;
+            margin-bottom: 50px;
             font-size: 26px;
         }
 
@@ -33,15 +41,17 @@
             max-width: 868px;
             width: 100%;
         }
-       // &--mt {
-        //    margin-top: -120px;
-       // }
+       
         &--2 {
             grid-area: title;
             margin: 10px 0 0;
 
+            @media @bw1660 {
+                margin: 15px 0 0;
+            }
+
             @media @bw1170 {
-                margin: 28px 0 0;
+                margin: 28px 0 10px;
             }
 
             @media @bw768 {
@@ -51,16 +61,17 @@
     }
 
     &__text {
-        margin: 0 0 100px;
-        width: 65%;
+        margin-top: 0;
+        margin-bottom: 100px;
+        width: 65.5%;
         align-self: flex-end;
         font-size: 18px;
         font-weight: 400;
         color: @black;
 
         @media @bw1170 {
+            width: 90%;
             margin-bottom: 80px;
-            width: 88%;
             font-size: 16px;
         }
 
@@ -71,48 +82,49 @@
         }
     }
 
-
-
     &__text2 {
-            grid-area: text;
-            margin-left: auto;
+        grid-area: text;
+        margin-left: auto;
+        margin-bottom: 0;
+        margin-top: 50px;
 
-            @media @bw1660 {
-                width: 66%;
-                margin-top: 44px;
-                
-            }
-
-            @media @bw1170 {
-                box-sizing: border-box;
-                margin-top: -10px;
-                width: 82%;
-                font-size: 16px;
-            }
-
-            @media @bw768 {
-                width: 100%;
-                margin-top: 0;
-                margin-bottom: 50px;
-            }
+        @media @bw1660 {
+            width: 65.5%;
+            margin-top: 94px; 
         }
+
+        @media @bw1170 {
+            box-sizing: border-box;
+            align-self: self-start;
+            justify-self: flex-end;
+            margin: 0;
+            width: 82%;
+            font-size: 16px;
+        }
+
+        @media @bw768 {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+    }
 
     &__text3 {
-            width: 100%;
-            margin-bottom: 100px;
+        width: 100%;
+        margin-bottom: 105px;
 
-            @media @bw1170 {
-                margin: 0 0;
-                max-width: 280px;
-                text-align: start;
-                font-size: 16px;
-            }
-
-            @media @bw768 {
-                min-width: 100%;
-            }
+        @media @bw1170 {
+            margin: 0 0;
+            max-width: 280px;
+            text-align: start;
+            font-size: 16px;
         }
-    
+
+        @media @bw768 {
+            min-width: 100%;
+            margin-bottom: 32px;
+        }
+    }
 
     &__block2 {
         display: grid;
@@ -120,25 +132,25 @@
         "picture picture picture2"
         "title title picture2" 
         "text text text";
-        gap: 50px;
         grid-template-columns: 1fr 1fr 405px;
+        gap: 0 50px;
+        margin-bottom: 110px;
 
         @media @bw1660 {
-            grid-template-columns: 1fr 1fr 378px;   
+            grid-template-columns: 1fr 1fr 393px;  
+            gap: 0 40px;
+            margin-bottom: 87px;
         }
 
-        @media @bw1340 {
-            gap: 41px 27px;
+        @media @bw1170 {
+            gap: 0 27px;
+            margin-bottom: 44px;
             grid-template-columns: 1fr 1fr 262px;
             grid-template-areas: 
             "picture picture picture"
             "title title picture2" 
             "text text picture2";
         }
-
-        @media @bw1170 {
-            margin-bottom: 20px;
-         }
 
         @media @bw768 {
             display:contents;
@@ -150,7 +162,7 @@
         grid-area: picture;
         position: relative;
         display: block;
-        margin-bottom: 50px;
+        margin-bottom: 85px;
         //width: 65.217%;
         
         &::before {
@@ -160,8 +172,8 @@
             padding-top: 66.322%;
         } 
 
-        @media @bw1340 {
-            margin-bottom: 10px;
+        @media @bw1170 {
+            margin-bottom: 51px;    
         }
 
         @media @bw768 {
@@ -174,7 +186,7 @@
         position: relative;
         display: block;
         align-self: flex-end;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         
         &::before {
             content: '';
@@ -183,7 +195,7 @@
             padding-top: 122.029%;
         }
 
-        @media @bw1340 {
+        @media @bw1170 {
             align-self: flex-start;
         }
 
@@ -208,12 +220,16 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        gap: 60px;
+        gap: 41px;
 
         @media @bw1170{
             gap: 80px 166px;
             flex-direction: column;
             align-items: flex-start;
+        } 
+
+        @media @bw768{
+            gap: 60px;
         } 
     }
 
@@ -231,7 +247,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 65%;
+            height: 66%;
             background-color: @red;
         }
 
@@ -245,16 +261,16 @@
 
     &__img2 {
         position: absolute;
-        top: 4%;
-        left: 4%;
+        top: 5%;
+        left: 4.5%;
         bottom: 0;
-        width: calc(100% - 5%);
+        width: calc(95%);
         object-fit: contain;
     }
 
     &__block3-wrapper {
         box-sizing: border-box;
-        max-width: 344px;
+        max-width: 354px;
         width: 100%;
 
         @media @bw1170 {
@@ -272,6 +288,8 @@
     }
 
     &__link {
+        display: flex;
+        justify-content: space-between;
         margin-left: auto;
         margin-top: -30px;
         max-width: 344px;
@@ -286,6 +304,7 @@
         }
 
         @media @bw768 {
+            margin-top: 0;
             display: flex;
             min-width: 100%;
             justify-content: space-between;

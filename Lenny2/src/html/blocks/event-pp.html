@@ -1,19 +1,23 @@
-<div class ="pp">
+<div class ="pp" id="js-eventPP">
     <div class="pp__container">
         <div class="pp__sticky-close">
 
-            <button type="button" class="pp__sticky-btn">
+            <button type="button" class="pp__sticky-btn js-ppCloseBtn">
                 <svg class="pp__btn-icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#x"></use>
                 </svg>
             </button>
+
         </div>
 
         <div class="pp__wrapper">
+
             <h3 class="pp__title">Заполните форму <br/> и мы подберем площадку</h3>
-            <div class="pp__form form">
-                <div class="form__list">
-                    <div class="form__field form__field--w50 field">
+
+            <form class="pp__form form" id="js-eventForm">
+                <div class="form__list ">
+                    <div class="form__field form__field--w50 field form__field-checks">
+
                         <h6 class="field__title">Формат мероприятия:</h6>
 
                         <div class="field__radio radio">
@@ -45,8 +49,8 @@
 
                     <div class="form__group">
                         <div class="form__field form__field--mb30 field">
-                            <h6 class="field__title">Планируемое количество посетителей:</h6>
-                            <select name="amount" class="field__select">
+                            <h6 class="field__title field__title-fs16">Планируемое количество посетителей:</h6>
+                            <select name="amount" class="field__select js-selectric">
                                 <option  value="20">до 20 человек</option>
                                 <option  value="100">от 20 до 100 человек</option>
                                 <option  value="500">от 100 до 500 человек</option>
@@ -54,26 +58,44 @@
                             </select>
                         </div> 
 
-                        <div class="form__field field">
-                            <h6 class="field__title">Дата проведения:</h6>
-                            <div class="field__inputs">
-                                <input class="field__input field__input--w55 field__input--datetime"
-                                        type="text"
-                                        placeholder="ММ"/>
-                                <input class="field__input field__input--w55 field__input--datetime"
-                                        type="text"
-                                        placeholder="ДД"/>
-                                <input class="field__input field__input--w110 field__input--datetime"
-                                        type="text"
-                                        placeholder="ГГГГ"/>        
+                        <div class="form__field field js-dateField">
+                            <h6 class="field__title field__title-fs16">Дата проведения:</h6>
+                            <div class="field__date">
+                              <div class="field__date-inputs">
+                                <input
+                                  class="field__date-input js-dateDay"
+                                  type="text"
+                                  placeholder="ДД"
+                                  readonly
+                                />
+                                <input
+                                  class="field__date-input js-dateMonth"
+                                  type="text"
+                                  placeholder="ММ"
+                                  readonly
+                                />
+                                <input
+                                  class="field__date-input field__date-input--year js-dateYear"
+                                  type="text"
+                                  placeholder="ГГГГ"
+                                  readonly
+                                />
+                              </div>
+                              <input
+                                class="field__date-picker js-dateInput"
+                                type="text"
+                                name="date"
+                                readonly
+                                required
+                              />
                             </div>
-                        <div>
-                    </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="form__section">
-                    <h6 class="field__title">Контактные данные:</h6>
+
+                    <h6 class="field__title field__title-fs16">Контактные данные:</h6>
                     <div class="form__list form__list--mb50">
                         <label class="form__field form__field--w50 field">
                         <span class="field__label">Имя*</span>
@@ -96,7 +118,7 @@
                         <label class="form__field form__field--w50 field">
                         <span class="field__label">Телефон*</span>
                         <input type="tel" 
-                                class="field__input" 
+                                class="field__input js-mobileMask" 
                                 placeholder="+7()___ __ __" 
                                 name="phone" 
                                 required/>
@@ -113,27 +135,48 @@
                     </div>
 
                     <label class="form__field form__field--mb30 field">
-                        <span class="field__label field__label--textarea">Есть пожелания? Напишите нам:</span>
-                        <textarea class="field__textarea" name="wish"></textarea>
+                        <span class="field__label field__label--textarea field__title-fs16">
+                            Есть пожелания? Напишите нам:
+                        </span>
+                        <textarea 
+                            class="field__textarea" 
+                            name="wish">
+                        </textarea>
                     </label>
                     
+                
                     <label class="form__check form__check--mb40 check">
+
+                        <span class="check__label">
+                            Я соглашаюсь с пользовательским соглашением и с политикой 
+                            использования персональными данныx
+                        </span>  
+                        
                         <input type="checkbox" 
                             class="check__input" 
                             name="agree" 
-                            required/>
-                        <span class="check__mark"></span>
-                        <span class="check__label">
-                            Я соглашаюсь с пользовательским соглашением и с политикой использования персональными данными
-                        </span>  
-                    </label>
+                            required  
+                        />
+                        <span class="check__mark" ></span>
+                    </label> 
+                    
+              
 
                     <div class="form__btns">
-                        <button type="submit" class="form__btn btn">Отправить</button>
-                        <button type="submit" class="form__btn btn btnclose"> Закрыть</button>
+                        <button 
+                            type="submit" 
+                            class="form__btn btn">
+                            Отправить
+                        </button>
+
+                        <button 
+                            type="button" 
+                            class="form__btn btn btnclose js-ppCloseBtn"> 
+                            Закрыть
+                        </button>
                     </div> 
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

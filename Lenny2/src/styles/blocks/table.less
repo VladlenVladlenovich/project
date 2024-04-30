@@ -31,7 +31,7 @@
 
     &:nth-child(2n-1) {
       background-color: fade(@black, 3%);
-      @media @bw768{
+      @media @bw768 {
         background-color: transparent;
       }
     }
@@ -55,6 +55,7 @@
 
 
     &:first-child {
+      
       padding-left: 0;
       @media @bw768 {
         display: none;
@@ -70,7 +71,7 @@
     }
 
     &:nth-child(2){
-        @media @bw768{
+        @media @bw768 {
             padding-left: 10px;
           }
     }
@@ -84,12 +85,15 @@
 
   &__th {
     height: 85px;
+  
     font-weight: 600;
     font-size: 18px;
     line-height: 1.35;
-    @media @bw768 {
-        font-size: 14px;
-      }
+
+    @media @bw1170 {
+      font-size: 14px;
+    }
+
   }
 
   &__footer-th {
@@ -105,7 +109,8 @@
 
   &__body-th {
     box-sizing: border-box;
-    height: 50px;
+    height: 50px;  
+   
     padding: 10px 10px 10px 0;
     border-top: 1px solid @gray_dark;
     border-bottom: 1px solid @gray_dark;
@@ -114,6 +119,10 @@
     line-height: 25px;
     text-align: left;
 
+    @media @bw1170 {
+      font-size: 14px;
+    }
+
     @media @bw768 {
         display: block;
         height: auto;
@@ -121,6 +130,7 @@
         width: 100%;
         padding: 15px 10px;
         font-weight: 600;
+        font-size: 14px;
         text-align: center;
         background-color: fade(@black, 3%);
     }

@@ -1,5 +1,5 @@
 .pp {
-    position: block;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -9,10 +9,18 @@
     overflow-y: auto;
     z-index: 110;  
     background-color: @gray;
-    //display: none,
+    display: none;
     @supports(backdrop-filter: blur(25px)) {
         background-color: @black_40;
         backdrop-filter: blur(25px);
+    }
+
+    @media @bw1170 {
+        padding: 90px 35px 50px;
+    }
+
+    @media @bw768 {
+        padding: 90px 20px 50px;
     }
 
     &__container {
@@ -28,6 +36,16 @@
         background-repeat: repeat;
         background-position: 0 0;
         background-size: auto;
+
+        @media @bw768 {
+            padding: 70px 20px 40px;
+        }
+    }
+
+    &__btn-icon {
+        margin: auto;
+        color: #ffff;
+        pointer-events: none;
     }
 
     &__title {
@@ -43,6 +61,19 @@
         line-height: 30px;
         letter-spacing: 0.44px;
         color: @white;
+
+        @media @bw1170 {
+            padding-left: 20px;
+            margin: -110px -30px 70px;
+        }
+
+        @media @bw768 {
+            max-width: 95%;
+            padding: 10px 30px;
+            margin: -100px 0 40px;
+            line-height: 140%;
+            font-size: 14px;
+        }
     }
 
     &__sticky-close {
@@ -73,6 +104,13 @@
             @media(hover:hover) {
                 background-color: @red_dark;
             }
+        }
+
+        @media @bw768 {
+            right: -38px;
+            top: -90px;
+            width: 36px;
+            height: 36px;
         }
     }
 

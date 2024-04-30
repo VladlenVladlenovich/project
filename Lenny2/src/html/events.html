@@ -31,7 +31,7 @@
                     "img_webp": "assets/images/events/HowStuffWorks.webp", 
                     "alt": "stuff", 
                     "title": "Есть тема, нужно обсудить с HowStuffWorks", 
-                    "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.", 
+                    "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи: как делают игрушки или двигатель автомобиля.", 
                     "time": "14.12.2022 | начало 18.30", 
                     "datetime": "2022-12-14T18:30" 
                     }, 
@@ -74,19 +74,21 @@
                     "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко", 
                     "time": "27.12.2022 | начало 10.00", 
                     "datetime": "2022-12-27T10:00" 
-                        }
+                    }
                     ])
-            </div>
-            <a href="#" class="link-vertical">
+          </div>
+
+            <a href="#" class="link-vertical events__link-vertical">
               <span class="link-verical__name">Показать еще</span>
-              <svg class="arrow link-vertical__icon" width="62" height="93">
+              <svg class="arrow arrow-vertical" width="62" height="93">
                 <use xlink:href="assets/icons/symbols.svg#link-vertical"></use>
               </svg>
             </a>   
+            
         </section>
 
         <section class="events__services">
-          <h2 class="section-title">Дополнительные услуги</h2>
+          <h2 class="section-title events__section-title__2">Дополнительные услуги</h2>
           <p class="events__services-description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
           <table class="events__tariffs-table  table">
                         <thead class="table__head">
@@ -192,11 +194,11 @@
           </table>
         </section>
 
-        <section class="main-header__iwant-mb100">
-          <p class="main-header__iwant-iwant">я хочу:</p>
-          <section class="main-header__btns">
-            <a href="#" class="btn btn-host">Провести мероприятие</a>
-            <a href="#" class="btn btn-tenant">Cтать арендатором</a>
+        <section class="iwant iwant-mb100 events__iwant-mb100">
+          <p class="iwant__title events__iwant-title">я хочу:</p>
+          <section class="iwant__btns events__iwant-btns">
+            <button type="button" class="btn iwant__btn-host " id="js-eventOpenBtn" >Провести мероприятие</button>
+            <button type="button" class="btn iwant__btn-tenant">Cтать арендатором</button>
           </section>
         </section>
 
@@ -204,6 +206,18 @@
     </main>     
     @@include('blocks/events-contacts.html')
     @@include('blocks/page-footer.html')
+    @@include('blocks/event-pp.html')
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+        <script src="scripts/jquery.selectric.min.js"></script>
+        <script src="scripts/jquery.mask.min.js"></script>
+        <script src="scripts/air-datepicker.js"></script>
+
+        <script src="scripts/jquery.validate.js"></script>
+        <script src="scripts/jquery.validate-init.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+        <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body> 
 
         

@@ -1,11 +1,16 @@
 .reserve {
+    width: 100%;
     display: grid;
-    gap: 65px 11%;
+    gap: 70px 11%;
     grid-template-columns: 405px calc(89% - 405px);
     grid-template-areas: 
         "checks scheme"
         "order legend";
-    width: 100%;
+    
+    @media @bw1660 {
+        gap: 70px 6%;
+        grid-template-columns: 402px calc(94% - 406px);
+    }
 
     @media @bw1340 {
         gap: 65px 6.5%;
@@ -22,6 +27,7 @@
     }
 
       @media @bw768 {
+        gap: 54px;
         grid-template-columns: 100%;
         grid-template-areas: 
           "scheme"
@@ -36,6 +42,8 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+   
 
     &__label {
         &--red {
@@ -63,6 +71,11 @@
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
+
+        @media @bw768 {
+            text-align: left;
+            align-items: flex-start;
+        }
     }
 
     &__section-title {
@@ -70,17 +83,23 @@
         font-weight: 700;
         font-size: 18px;
         line-height: normal;
-        &--mb30{
+        &--mb30 {
             margin-bottom: 30px;
+        }
+
+        @media @bw768 {
+            align-self: self-start;
+            font-size: 16px;   
         }
     }
 
     &__check {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         &:last-child {
             margin-bottom: 0;
         }
     }
+
 
     &__scheme-container {
         display: flex;
@@ -88,6 +107,11 @@
         align-items: center;
         width: 100%;
         max-width: 780px;
+
+        @media @bw1170 {
+            margin: 0 auto;
+            max-width: 630px;
+        }  
     }
 
     &__scheme-title {
@@ -98,6 +122,18 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
+
+        @media @bw1170 {
+            padding: 6px 50px;
+            margin-bottom: 40px;
+            line-height: 16px;
+            font-size: 11px;
+        }
+
+        @media @bw768 {
+            font-weight: 700;
+            font-size: 11px;   
+        }
     }
 
     &__scheme-wrapper {
@@ -120,15 +156,43 @@
         height: 100%;
     }
 
+    &__booking-title {
+        @media @bw1170 {
+            max-width: 180px;
+            font-size: 16px;
+        }
+    }
+
+    &__sum-title {
+        @media @bw1170 {
+            margin-top: 4px;
+            font-size: 16px;
+        }
+    }
+
+    &__tickets-title {
+        @media @bw1170 {
+            font-size: 16px;
+        }
+    }
+
     &__tickets {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        @media @bw768 {
+            margin-bottom: -4px;
+        }
     }
 
     &__qty { 
         padding-bottom: 18px;
         font-size: 16px;
+
+        @media @bw768 {
+            font-size: 14px;  
+        }
         
         &::after {
             content: " " attr(data-caption) " | " attr(data-price);
@@ -137,6 +201,11 @@
 
     &__sum {
         font-weight: 600;
+
+        @media @bw768 {
+            font-size: 14px;  
+        }
+
         &::after {
             content: attr(data-currency);
             margin-left: 4px;
@@ -146,10 +215,22 @@
 
     &__total {
         margin-top: 10px;
-        margin-bottom: 40px;
+        margin-bottom: 55px;
         text-align: center;
         font-weight: 600;
         font-size: 20px; 
+
+        @media @bw1170 {
+            margin-top: 5px;
+            margin-bottom: 45px;
+        }
+
+        @media @bw768 {
+            margin-top: 11px;
+            margin-bottom: 40px;
+            font-size: 18px;  
+        }
+
         &::before {
           content: attr(data-caption);
           margin-right: 30px;
@@ -187,6 +268,12 @@
             width: 24px;
             height: 24px;
             background-color: @black;
+
+            @media @bw768 {
+                top: 4px;
+                width: 20px;
+                height: 20px; 
+            }
         }
 
         &::after {
@@ -198,6 +285,10 @@
             &::before {
             background-color: @red;
              }
+             @media @bw768 {
+                margin-bottom: 6px;
+            }
+             
         }
 
         &:last-child {
@@ -206,15 +297,34 @@
     }
 
     &__price-list {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+        @media @bw768 {
+            margin-bottom: 29px;
+            align-self: flex-start;  
+        }
     }
 
     &__btn-tickets {
-        padding: 15px 131px;
+        padding: 15px 140px;
         border: transparent;
         background-color: @red;
         outline: none;
         color: @white;
+
+        @media @bw1660 {
+            padding: 9px 108px;
+        }
+
+        @media @bw1170 {
+            padding: 9px 133px;
+        }
+
+        @media @bw768 {
+            width: 100%;
+            padding: 15px 60px;
+            font-size: 14px;  
+        }
+
         &:active {
             background-color: @red_dark;
             color: @white;
@@ -232,6 +342,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @media @bw768 {
+            align-self: self-start;    
+        }
     }
     
     &__note {
@@ -243,6 +357,11 @@
         padding-top: 2px;
         font-size: 14px;
         line-height: 19px;
+
+        @media @bw768 {
+            padding-left: 45px;
+            align-self: self-start;    
+        }
         
         &--free {
             &::before,
@@ -263,19 +382,28 @@
                 left: 12px;
                 border-color: @red;
             }
+
+            @media @bw768 {
+                margin-top: -5px;    
+            }
         }
 
         &--booked {
+            
             &::before {
                 content: "";
                 position: absolute;
-                left: 6px;
                 top: 0;
+                left: 0;
                 display: block;
                 width: 24px;
                 height: 24px;
                 border-radius: 50%;
                 background-color: @gray_dark;
+            }
+
+            @media @bw768 {
+                margin-top: 4px;    
             }
         }
         

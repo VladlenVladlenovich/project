@@ -63,7 +63,13 @@
     ul > li {
       box-sizing: border-box;
       position: relative;
-      padding-left: 20px;
+      padding-left: 15px;
+
+      @media @bw768 {
+        padding-left: 8px; 
+        margin-bottom: 9px;
+        
+    }
       &::before {
         content: "";
         display: block;
@@ -79,6 +85,7 @@
       
     }
     ol {
+      margin-left: 5px;
       counter-reset: li;
       padding: 0;
     }
@@ -92,10 +99,16 @@
         color: @black;
         white-space: pre;
       }
+      @media @bw768 {
+        margin-bottom: 5px;
+        
+    }
+
+  
     }
     ul > li,
     ol > li {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       cursor: default;
       &:last-child {
         margin-bottom: 0;
@@ -201,9 +214,5 @@
     }
     b {
       font-weight: 700;
-    }
-    &__container{
-      .container;
-    }
-    
+    }    
   }

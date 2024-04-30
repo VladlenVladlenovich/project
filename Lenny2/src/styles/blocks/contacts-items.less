@@ -1,17 +1,23 @@
 .contacts-item {
     display: flex;
-    gap: 54px;
+    gap: 60px;
     align-items: center;
+
+    @media @bw1660 {
+        gap: 54px;
+    }
+
     @media @bw1170 {
         flex-direction: column; 
-        min-width: 230px;
+        min-width: 223px;
         gap: 30px;       
     }
 
-    &--column {
-        flex-direction: column; 
-        width: calc(33.3333% - 50px);        
+    @media @bw768 {
+        flex-direction: row;    
+        min-width: 280px;
     }
+
 
     &__img {
         display: flex;
@@ -23,13 +29,18 @@
         min-height: 110px;
         background-color: @black;
         color: @red;
+
         @media @bw1170 {
             margin: 0 auto;  
-    
         }
-        &--center {
-            margin: 0 auto;   
-         }  
+
+        @media @bw768 {
+            margin: 0;
+            height: 65px;
+            width: 65px;
+            min-width: 65px;
+            min-height: 65px;
+        } 
     }
 
     &__title {
@@ -38,19 +49,20 @@
         font-size: 20px;
         line-height: normal;
         color: @black;
+
         @media @bw1170 {
             text-align: center;
             width: 100%;
-            margin-bottom: 10px;  
+            margin-bottom: 18px;  
+            font-weight: 700;
             font-size: 18px;
-            font-weight: 700; 
         }
 
-        &--center {
-            text-align: center;
-            width: 100%;
-            margin-top: 40px;
-            margin-bottom: 10px; 
+        @media @bw768 {
+            text-align: start;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
         }
     }
 
@@ -62,19 +74,20 @@
         line-height: normal;
         color: @black;
         @media @bw1170 {
-            margin: 0 0 0;
+            margin: 6px 0 0;
             text-align: center;
             max-width: 401px;
             width: 100%;
+            line-height: 20px; 
+            font-size: 16px;
         }
 
-        &--center {
-            margin: 0 0 0;
-            text-align: center;
-            max-width: 401px;
-            width: 100%;
+        @media @bw768 {
+            text-align: start;
+            font-size: 14px;
+            line-height: 18px;
         }
-        
+
         &[href] {
             text-decoration: none;
             transition: color 0.2s;

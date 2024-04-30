@@ -1,14 +1,18 @@
 .check {
+
     position: relative;
     box-sizing: border-box;
     display: block;
     padding-left: 40px;
 
     &--red {
+
         color: @red;
+        
         .check__mark {
             border-color: @red;
         }
+
         .check__input {
             &:checked {
                 & ~ .check__mark {
@@ -20,13 +24,17 @@
 
     &--disabled {
         pointer-events: none;
-        opacity: 0.5    
+        opacity: 0.5; 
     }
+
+    
 
     &__input {
         .is-hidden;
+        
 
         &:checked {
+            
             &~.check__mark {
                 background-color: @black;
                 &::after {
@@ -61,6 +69,10 @@
         color: @black;
         &--f16 {
             font-size: 16px;
+
+            @media @bw768 {
+                font-size: 14px;
+            }
         }
     }
 }
