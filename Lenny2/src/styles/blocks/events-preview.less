@@ -12,31 +12,58 @@
           width: 0; 
           height: 0; 
           border-bottom: 35px solid fade(@white, 60%); 
+
+          @media @bw1340 {
+            border-bottom: 18px solid fade(@white, 60%); 
+          }
+
+          @media @bw768 {
+            border-bottom: 10px solid fade(@white, 60%); 
+        }
        
         } 
         &::before { 
           left: 0; 
           border-right: 34vw solid transparent; 
+
+          @media @bw768 {
+            border-right: 45vw solid transparent; 
+        }
         } 
         &::after { 
           right: 0; 
           border-left: 66vw solid transparent; 
-         
+
+          @media @bw1340 {
+            border-left: 68vw solid transparent; 
+          }
         } 
+
+        @media @bw1660 {
+          padding: 35px 0 40px; 
+      }
+      @media @bw1340 {
+        padding: 18px 0 18px; 
+      }
+
+      @media @bw768 {
+        padding: 10px 0 18px; 
+      }
+
       &__wrapper { 
           width: 100%; 
-          padding: 85px 0 50px; 
+          padding: 85px 0 43px; 
           background-color: fade(@white, 60%); 
 
           @media @bw1660 {
-            padding: 85px 0 40px; 
+            padding: 72px 0 40px; 
         }
 
         @media @bw1170 {
-          padding: 52px 0 0; 
+          padding: 59px 0 27px; 
       }  
       @media @bw768 {
-        padding: 10px 0 0; 
+        padding: 29px 0 31px; 
     }
           
            
@@ -50,14 +77,33 @@
             width: 0; 
             height: 0; 
             border-top: 40px solid fade(@white, 60%); 
+
+            @media @bw1340 {
+              border-top: 18px solid fade(@white, 60%); 
+          }
           } 
           &::before { 
             left: 0; 
             border-right: 61vw solid transparent; 
+            @media @bw1660 {
+              border-right: 69vw solid transparent; 
+            }
+            @media @bw768 {
+              border-right: 69vw solid transparent; 
+          }
+         
           } 
           &::after { 
             right: 0; 
             border-left: 39vw solid transparent; 
+            @media @bw1660 {
+              border-left: 33vw solid transparent; 
+            }
+
+            @media @bw768 {
+              border-left: 40vw solid transparent; 
+          }
+         
           } 
         } 
 
@@ -119,10 +165,6 @@
         padding-bottom: 10px;
         padding-right: 0;
         float: right;
-
-        @media @bw1660 {
-          
-      }
 
         @media @bw768 {
             margin-top: 18px;

@@ -8,8 +8,12 @@
         .container;
         margin-bottom: 90px;
 
+        @media @bw1660 {
+            margin-bottom: 101px;
+        }
+
         @media @bw1170 {
-            margin-bottom: 40px;
+            margin-bottom: 52px;
         }
 
         @media @bw768 {
@@ -47,11 +51,11 @@
             margin: 10px 0 0;
 
             @media @bw1660 {
-                margin: 15px 0 0;
+                margin: 12px 0 0;
             }
 
             @media @bw1170 {
-                margin: 28px 0 10px;
+                margin: 28px 0 0;
             }
 
             @media @bw768 {
@@ -63,11 +67,15 @@
     &__text {
         margin-top: 0;
         margin-bottom: 100px;
-        width: 65.5%;
+        width: 65%;
         align-self: flex-end;
         font-size: 18px;
         font-weight: 400;
         color: @black;
+
+        @media @bw1660 {
+            width: 65.5%;
+        }
 
         @media @bw1170 {
             width: 90%;
@@ -110,8 +118,16 @@
     }
 
     &__text3 {
+        position: relative;
+        left: 9px;
         width: 100%;
-        margin-bottom: 105px;
+        margin-bottom: 122px;
+
+        @media @bw1660 {
+            left: 0;
+            width: 100%;;
+        }
+        
 
         @media @bw1170 {
             margin: 0 0;
@@ -133,8 +149,8 @@
         "title title picture2" 
         "text text text";
         grid-template-columns: 1fr 1fr 405px;
-        gap: 0 50px;
-        margin-bottom: 110px;
+        gap: 0 60px;
+        margin-bottom: 112px;
 
         @media @bw1660 {
             grid-template-columns: 1fr 1fr 393px;  
@@ -162,7 +178,7 @@
         grid-area: picture;
         position: relative;
         display: block;
-        margin-bottom: 85px;
+        margin-bottom: 90px;
         //width: 65.217%;
         
         &::before {
@@ -222,13 +238,17 @@
         align-items: flex-end;
         gap: 41px;
 
-        @media @bw1170{
-            gap: 80px 166px;
+        @media @bw1660{
+            gap: 32px;
+        } 
+
+        @media @bw1170 {
+            gap: 82px 166px;
             flex-direction: column;
             align-items: flex-start;
         } 
 
-        @media @bw768{
+        @media @bw768 {
             gap: 60px;
         } 
     }
@@ -240,6 +260,9 @@
         max-width: 930px;
         width: 100%;
         padding: 18px 9px 0 49px;
+        @media @bw1660 {
+                max-width: 865px;
+            }
 
         &::before{
             content: '';
@@ -247,8 +270,13 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 66%;
+            height: 65%;
             background-color: @red;
+            @media @bw1660 {
+                height: 64.5%;
+            }
+
+           
         }
 
         &::after {
@@ -262,27 +290,42 @@
     &__img2 {
         position: absolute;
         top: 5%;
-        left: 4.5%;
+        left: 5%;
         bottom: 0;
-        width: calc(95%);
+        width: calc(94%);
         object-fit: contain;
+
+        @media @bw1660 {
+            left: 4%;
+            width: calc(95%);
+        }
+    
+
     }
 
     &__block3-wrapper {
         box-sizing: border-box;
-        max-width: 354px;
-        width: 100%;
+        max-width: 26.5%;
+
+        @media @bw1660 {
+            max-width: 28%;
+            margin-bottom: -10px;;
+        }
+    
 
         @media @bw1170 {
             box-sizing: border-box;
+            width: 865px;
+           
             max-width: 100%;
+            margin-bottom: 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
 
         @media @bw768 {
-            flex-direction: column;;
+            flex-direction: column;
             min-width: 100%;
         }
     }
@@ -293,6 +336,10 @@
         margin-left: auto;
         margin-top: -30px;
         max-width: 344px;
+
+        @media @bw1660 {
+            max-width: 100%;
+        }
 
         @media @bw1170 {
             display: flex;

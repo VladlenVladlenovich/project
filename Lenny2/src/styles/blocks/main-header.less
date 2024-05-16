@@ -1,6 +1,5 @@
 .main-header {
     margin-bottom: 200px;
-
     @media @bw1340 {
         margin-bottom: 130px;
     }
@@ -21,6 +20,11 @@
         font-size: 45px;
         color:#1F1E1E;
         font-weight: 400;
+
+        @media @bw1660 {
+            margin-top: 98px;
+            margin-bottom: 51px;
+        }
 
         @media @bw1340 {
             margin-top: 80px;
@@ -59,7 +63,7 @@
 
         @media @bw768 {
             padding: 18px 0;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             max-width: 330px;
         }
     }
@@ -108,5 +112,20 @@
         height: 100%;
         padding: 0;
         object-fit: cover;
+    }
+
+    &__iwant-title {
+        position: relative;
+        left: 9px;
+        margin-bottom: 45px;
+
+        @media @bw1170 {
+            left: 0;
+            margin-bottom: 40px;
+        }
+
+        @media @bw768 {
+            margin-bottom: 19px;
+        }
     }
 }

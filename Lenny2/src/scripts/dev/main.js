@@ -11,11 +11,6 @@
     const eventPP = document.querySelector("#js-eventPP");
 
 
-
-
-
-
-
     if (eventPP) {
         const eventOpenBtn = document.querySelector("#js-eventOpenBtn");
         const closeEventPP = function (event) {
@@ -344,11 +339,13 @@ if (dateField.length) {
 
 let activeCheckboxesCount = 0;
 const svgImages = document.querySelectorAll(".js-sceneTable");
-
+console.log(svgImages)
 
 var sum=0;
 
 svgImages.forEach(svgImage => {     
+
+ 
 
   const group = svgImage.querySelector(".scene__table-group");
     const strokeColor = group.getAttribute("stroke");
@@ -358,7 +355,8 @@ svgImages.forEach(svgImage => {
   group.querySelectorAll("circle, rect, path").forEach(item => {
 
   svgImage.classList.add("scene__active")
-   svgImage.addEventListener("click", function() {
+   svgImage.addEventListener("click", function() { 
+    svgImage.classList.remove("scene__table")
 
       if(item.getAttribute("fill")=="null" ){
         item.setAttribute("fill", strokeColor);
@@ -441,3 +439,39 @@ svgImages.forEach(svgImage => {
      
   })
 })();
+
+
+
+
+svgImages.forEach(svgImage => {
+  const group = svgImage.querySelector(".scene__table-group");
+  const data  = svgImage.getAttribute("data-check");
+  const checks = document.querySelectorAll(".check__input");
+  const strokeColor = group.getAttribute("stroke");
+
+  checks.forEach(check => {
+      group.querySelectorAll("circle, rect, path").forEach(item => {
+        check.addEventListener("click", function() { 
+          
+          if (check.checked==true) {
+            if (this.getAttribute("name") == data) {
+              if (item.getAttribute("fill")=="null" ) {
+                item.setAttribute("fill", strokeColor);
+                svgImage.querySelector(".scene__table-num").setAttribute("fill", "white");
+              }
+              
+            }
+          }
+          else {
+            if (this.getAttribute("name") == data) {
+          
+                item.setAttribute("fill", "null");
+                svgImage.querySelector(".scene__table-num").setAttribute("fill",strokeColor);
+              
+            }
+          }
+        })
+      })
+    })
+  
+  })

@@ -17,7 +17,6 @@
     &__title {
         width: 100%;
         margin-bottom: 48px;
-        margin-left: 12px;
         font-family: Lora;
         font-size: 22px;
         font-style: normal;
@@ -28,19 +27,14 @@
         text-align: center;  
         
         @media @bw1340 { 
-            margin-left:  2px;
-            margin-bottom: 35px;
             font-size: 16px;
             font-weight: 500;    
         }
 
-        @media @bw1020 {
-            margin-bottom: 36px;
-        }
+       
 
         @media @bw768 {
             font-size: 13px;
-            margin-bottom: 16px; 
         }     
     }
 
@@ -53,7 +47,7 @@
         justify-content: space-between;
 
         @media @bw1660 {
-            max-width: 620px;
+        
         }
 
         @media @bw1340 {
@@ -103,6 +97,11 @@
         outline: none;
         font-weight: 600;
         font-size: 16px;   
+
+        @media @bw1660 {
+            padding: 15px 39px;
+        } 
+
         @media @bw768 {
             font-size: 14px;
         } 

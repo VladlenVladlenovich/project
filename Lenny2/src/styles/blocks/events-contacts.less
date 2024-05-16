@@ -21,11 +21,12 @@
         justify-content: space-between;
 
         @media @bw1660 {
-            gap: 30px;
+            gap: 10px;
+        
         }
 
         @media @bw1170 {
-            gap: 44px;
+            gap: 49px;
         }
 
 
@@ -41,11 +42,11 @@
         align-items: center;
 
         @media @bw1660 {
-            width: calc(33.3333% - 20px);
+            width: calc(33.3333% - 7px);
         }
     
         @media @bw1170 {
-           width: 45%;
+           width: 46%;
            &:last-child {
              margin: 0 auto;
            }
@@ -67,6 +68,9 @@
         width: 100%;
         margin-top: 40px;
         margin-bottom: 10px; 
+        @media @bw1170 {
+            margin-bottom: 18px;
+        }
 
         @media @bw768 {
             margin-top: 30px;
@@ -82,10 +86,14 @@
         max-width: 401px;
         width: 100%;
         @media @bw1170 {
-            min-width: 45%;
+            margin: 0 0 0;
+            min-width: 46%;
+            line-height: 19px;
+            font-size: 14px;
         }
         
         @media @bw768 {
+            margin: 0 0 0;
             max-width: 500px;
             min-width: 224px;
             font-size: 13px;

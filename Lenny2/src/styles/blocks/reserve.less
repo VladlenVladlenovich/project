@@ -27,7 +27,7 @@
     }
 
       @media @bw768 {
-        gap: 54px;
+        gap: 53px;
         grid-template-columns: 100%;
         grid-template-areas: 
           "scheme"
@@ -41,6 +41,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        @media @bw768 {
+            margin-bottom: 10px;
+        }
     }
 
    
@@ -97,6 +101,10 @@
         margin-bottom: 12px;
         &:last-child {
             margin-bottom: 0;
+        }
+
+        @media @bw768 {
+            margin-bottom: 17px;
         }
     }
 
@@ -168,11 +176,21 @@
             margin-top: 4px;
             font-size: 16px;
         }
+
+        @media @bw768 {
+            margin-bottom: 16px;
+        }
+
+
     }
 
     &__tickets-title {
         @media @bw1170 {
             font-size: 16px;
+        }
+
+        @media @bw768 {
+            margin-bottom: 22px;
         }
     }
 
@@ -182,7 +200,7 @@
         align-items: baseline;
 
         @media @bw768 {
-            margin-bottom: -4px;
+            margin-bottom: -7px;
         }
     }
 
@@ -226,7 +244,7 @@
         }
 
         @media @bw768 {
-            margin-top: 11px;
+            margin-top: 15px;
             margin-bottom: 40px;
             font-size: 18px;  
         }
@@ -280,13 +298,17 @@
             content: attr(data-caption);
 
         }
+
+        @media @bw768 {
+            line-height: 25px;
+        }
         
         &--red {
             &::before {
             background-color: @red;
              }
              @media @bw768 {
-                margin-bottom: 6px;
+                margin-bottom: 5px;
             }
              
         }
@@ -297,9 +319,9 @@
     }
 
     &__price-list {
-        margin-bottom: 40px;
+        margin-bottom: 38px;
         @media @bw768 {
-            margin-bottom: 29px;
+            margin-bottom: 28px;
             align-self: flex-start;  
         }
     }
@@ -312,7 +334,7 @@
         color: @white;
 
         @media @bw1660 {
-            padding: 9px 108px;
+            padding: 9px 138px;
         }
 
         @media @bw1170 {
@@ -344,6 +366,7 @@
         align-items: flex-end;
 
         @media @bw768 {
+            margin-bottom: 6px;
             align-self: self-start;    
         }
     }
@@ -353,13 +376,14 @@
         box-sizing: border-box;
         min-height: 24px;
         margin-bottom: 13px;
-        padding-left: 54px;
+        padding-left: 55px;
         padding-top: 2px;
         font-size: 14px;
         line-height: 19px;
 
         @media @bw768 {
             padding-left: 45px;
+            margin-bottom: 7px;
             align-self: self-start;    
         }
         
